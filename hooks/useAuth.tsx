@@ -44,16 +44,16 @@ export const  AuthProvider = ({children}: AuthProviderProps) => {
     useEffect(
         () => 
             onAuthStateChanged(auth, (user) => {
-                if (user) {
+                // if (user) {
                     //Logged in...
                     setUser(user)
                     setLoading(false)
-                } else {
-                    // Not Logged in...
-                    setUser(null)
-                    setLoading(true)
-                    router.push('/login')
-                }
+                // } else {
+                //     // Not Logged in...
+                //     setUser(null)
+                //     setLoading(true)
+                //     router.push('/login')
+                // }
 
                 setInitialLiading(false)
             }),
